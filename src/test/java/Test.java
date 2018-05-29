@@ -2,6 +2,10 @@ import com.smart.domain.DAOFactory;
 import com.smart.domain.TeacheruserDao;
 import com.smart.domain.teacheruser;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 public class Test {
     public static void main(String...args) {
         TeacheruserDao dao= DAOFactory.getTeacherDaoInstance();
@@ -17,8 +21,11 @@ public class Test {
         String userid="33333";
         dao.delete(userid);
         String id="201608020202";
-        dao.queryById(id);
-        dao.queryAll();
-      System.out.println();
+        System.out.println(id+" "+dao.queryById(id).getNames()+" "+dao.queryById(id).getUsernames()
+        +" "+dao.queryById(id).getPwd()+" "+dao.queryById(id).getNumber());
+        List li=dao.queryAll();
+        Iterator iter=li.iterator();
+        while(iter.hasNext())
+            System.out.println(iter.next().toString());
     }
 }

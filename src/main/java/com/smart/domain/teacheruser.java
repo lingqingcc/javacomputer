@@ -47,4 +47,15 @@ public class teacheruser {
     public void setUsernames(String usernames) {
         this.usernames = usernames;
     }
+
+    @Override
+    public String toString() {
+        return "teacheruser{" +
+                "userid='" + userid + '\'' +
+                ", names='" + names + '\'' +
+                ", usernames='" + usernames + '\'' +
+                ", pwd='" + pwd + '\'' +
+                ", number='" + number + '\'' +
+                '}';
+    }
 }

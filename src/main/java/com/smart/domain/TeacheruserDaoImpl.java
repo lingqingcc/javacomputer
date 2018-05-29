@@ -33,7 +33,7 @@ public class TeacheruserDaoImpl implements TeacheruserDao {
 
     @Override
     public void update(teacheruser teacheruser) {
-           String sql="update t_teacher set user_id=?,name=?,user_name=?,password=?,phonenumber=?";
+           String sql="update t_teacher set user_id=?,name=?,user_name=?,password=?,phonenumber=? ";
         PreparedStatement pstmt = null;
         DBoperator dbc = null;
         try {
@@ -127,9 +127,10 @@ public class TeacheruserDaoImpl implements TeacheruserDao {
                 teuser.setUsernames(usernames);
                 teuser.setPwd(pwd);
                 teuser.setNumber(num);
-                return list;
-            }
+                list.add(teuser);
 
+            }
+            return list;
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
