@@ -7,9 +7,7 @@ public class teacheruser {
     private String pwd;
     private String number;
 
-    public String getPwd() {
-        return pwd;
-    }
+    public String getPwd() { return pwd; }
 
     public void setPwd(String pwd) {
         this.pwd = pwd;

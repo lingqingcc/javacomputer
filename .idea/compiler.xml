@@ -9,8 +9,5 @@
         <module name="javacomputer" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="javacomputer" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
